@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mgateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: first
+          uri: lb://m1
+          order: 1
+          predicates:
+            - Path=/**
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+server:
+  port: 80
+

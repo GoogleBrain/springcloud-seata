@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    password: King1234.
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/m3
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: m3
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+server:
+  port: 5050
